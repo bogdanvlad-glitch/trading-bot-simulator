@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trading Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="topbar">
+            <div>
+                <p class="small-title">SIMULATION</p>
+                <h1>Trading Simulator</h1>
+            </div>
+
+            <div class="market-status">
+                <span class="status-dot"></span>
+                <span class="js-market-status">Marché arrêté</span>
+            </div>
+        </header>
+
+
+        <!-- STATS -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <p>Cash</p>
+                <h2>
+                    <span class="js-cash">1000</span> €
+                </h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Portefeuille</p>
+                <h2>
+                    <span class="js-portfolio-value">0</span> €
+                </h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Total</p>
+                <h2>
+                    <span class="js-total-value">1000</span> €
+                </h2>
+            </div>
+
+        </section>
+
+
+        <!-- MARKET CONTROLS -->
+
+        <section class="market-controls">
+
+            <button class="js-start-market start-button">
+                Start Market
+            </button>
+
+            <button class="js-stop-market stop-button">
+                Stop Market
+            </button>
+
+            <button class="js-reset reset-button">
+                Reset
+            </button>
+
+        </section>
+
+
+        <!-- STOCKS -->
+
+        <section>
+
+            <div class="section-header">
+                <div>
+                    <p class="small-title">MARCHÉ</p>
+                    <h2>Actions</h2>
+                </div>
+            </div>
+
+            <div class="js-stock-list stock-list"></div>
+
+        </section>
+
+
+        <!-- HISTORY -->
+
+        <section class="history-section">
+
+            <div class="section-header">
+
+                <div>
+                    <p class="small-title">ACTIVITÉ</p>
+                    <h2>Historique</h2>
+                </div>
+
+            </div>
+
+            <div class="js-history history-list">
+
+                <div class="empty-history">
+                    Aucune transaction pour le moment.
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

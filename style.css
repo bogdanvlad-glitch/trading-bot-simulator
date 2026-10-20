@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: rgb(15, 15, 18);
+    color: white;
+}
+
+.app {
+    width: 900px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 50px 0 80px;
+}
+
+
+/* HEADER */
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+h1 {
+    margin: 5px 0 0;
+
+    font-size: 38px;
+}
+
+h2 {
+    margin: 5px 0 0;
+}
+
+.small-title {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: rgb(150, 150, 160);
+
+    letter-spacing: 2px;
+}
+
+.market-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background-color: rgb(30, 30, 35);
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background-color: rgb(130, 130, 140);
+}
+
+
+/* STATS */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background-color: rgb(27, 27, 32);
+
+    padding: 25px;
+
+    border-radius: 14px;
+}
+
+.stat-card p {
+    margin: 0 0 10px;
+
+    color: rgb(160, 160, 170);
+}
+
+.stat-card h2 {
+    font-size: 30px;
+}
+
+
+/* MARKET BUTTONS */
+
+.market-controls {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+}
+
+button {
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.start-button {
+    background-color: white;
+
+    color: black;
+}
+
+.stop-button,
+.reset-button {
+    background-color: rgb(40, 40, 46);
+
+    color: white;
+}
+
+
+/* SECTIONS */
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+/* STOCKS */
+
+.stock-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-bottom: 45px;
+}
+
+.stock-card {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr 1fr 180px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: rgb(27, 27, 32);
+
+    padding: 20px;
+
+    border-radius: 14px;
+}
+
+.stock-name {
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.stock-symbol {
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: rgb(145, 145, 155);
+}
+
+.stock-info p {
+    margin: 0 0 5px;
+
+    color: rgb(145, 145, 155);
+
+    font-size: 13px;
+}
+
+.stock-info strong {
+    font-size: 18px;
+}
+
+.stock-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+}
+
+.buy-button {
+    background-color: rgb(225, 225, 225);
+
+    color: black;
+}
+
+.sell-button {
+    background-color: rgb(50, 50, 57);
+
+    color: white;
+}
+
+
+/* HISTORY */
+
+.history-section {
+    margin-top: 20px;
+}
+
+.history-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.history-item {
+    display: grid;
+
+    grid-template-columns: 1fr 150px;
+
+    background-color: rgb(27, 27, 32);
+
+    padding: 15px 18px;
+
+    border-radius: 10px;
+}
+
+.history-item p {
+    margin: 0;
+}
+
+.history-amount {
+    text-align: right;
+
+    font-weight: bold;
+}
+
+.empty-history {
+    color: rgb(130, 130, 140);
+
+    padding: 20px 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stock-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stock-actions {
+        justify-content: flex-start;
+    }
+
+    .topbar {
+        align-items: flex-start;
+
+        gap: 20px;
+
+        flex-direction: column;
+    }
+}
