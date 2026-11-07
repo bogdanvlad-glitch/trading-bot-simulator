@@ -207,7 +207,7 @@ function renderStocks() {
 
     let stocksHTML = '';
     
-    stocks.forEach(function(stock, index) {
+    stocks.forEach((stock, index) {
         name = stock.name;
         price = (Math.round((stock.price) * 100)) / 100;
         owned = stock.owned;
@@ -245,7 +245,7 @@ function renderStocks() {
 }
 
 function updatePrices() {
-    stocks.forEach(function(stock) {
+    stocks.forEach((stock) {
         const randomVariation = Math.random();
 
         const randomDirection = Math.random();
